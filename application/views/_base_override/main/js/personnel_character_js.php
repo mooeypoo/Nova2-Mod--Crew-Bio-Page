@@ -2,12 +2,7 @@
 
 <?php $string = random_string('alnum', 8);?>
 
-
-<script type="text/javascript" src="<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-popover.js"></script>
-<script type="text/javascript" src="<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-twipsy.js"></script>
-
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . MODFOLDER;?>/assets/js/css/bootstrap-twipsy.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . MODFOLDER;?>/assets/js/css/bootstrap-popover.css" media="screen" />
+		<script type="text/javascript" src="<?php echo base_url().MODFOLDER.'/assets/js/jquery.lazy.js';?>"></script>
 
 <style type="text/css">
 #infocols {
@@ -25,10 +20,43 @@
 	width: 400px;
 	margin-top: 15px;
 }
+
+.popover .title {
+	background-color: #34363a !important;
+	color: #fff !important;
+	border-bottom: none !important;
+}
+.popover .content {
+	background: #34363a !important;
+}
 </style>
 
 <script type="text/javascript">
 	$(document).ready(function(){
+
+				$.lazy({
+					src: '<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-twipsy.js',
+					name: 'twipsy',
+					dependencies: {
+						css: ['<?php echo base_url() . MODFOLDER;?>/assets/js/css/bootstrap-twipsy.css']
+					},
+					cache: true
+				});
+				
+				$.lazy({
+					src: '<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-popover.js',
+					name: 'popover',
+					dependencies: {
+						js: ['<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-twipsy.js'],
+						css: [
+							'<?php echo base_url() . MODFOLDER;?>/assets/js/css/bootstrap-twipsy.css',
+							'<?php echo base_url() . MODFOLDER;?>/assets/js/css/bootstrap-popover.css'
+						]
+					},
+					cache: true
+				});
+
+
 		$('#tabs').tabs();
 		
 		$('table.zebra tbody > tr:nth-child(odd)').addClass('alt');

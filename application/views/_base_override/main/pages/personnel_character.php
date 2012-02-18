@@ -104,7 +104,7 @@
 			<?php 
 				if (isset($character_awards) && (count($character_awards)>0)) { 
 					foreach ($character_awards as $awrd) { ?>
-						<a href="<?php echo base_url(); ?>/index.php/sim/awards/<?php echo $awrd['id']; ?>" rel="popover" class="award_image" title="<?php echo $awrd['name'];?>" data-content="<?php echo ($awrd['date']).'<br />'.$awrd['reason'];?>"><?php echo img($awrd['img']);?></a>
+						<a href="<?php echo base_url('index.php/sim/awards/'); ?>/<?php echo $awrd['id']; ?>" rel="popover" class="award_image" title="<?php echo $awrd['name'];?>" data-content="<?php echo ($awrd['date'])."\n".$awrd['reason'];?>"><?php echo img($awrd['img']);?></a>
 			<?php
 					}
 				}
