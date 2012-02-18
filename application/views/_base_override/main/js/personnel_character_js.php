@@ -1,5 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
+<?php
+	/**********************/
+	/**** CREW BIO MOD ****/
+	/**********************/
+?>
 <?php $string = random_string('alnum', 8);?>
 
 		<script type="text/javascript" src="<?php echo base_url().MODFOLDER.'/assets/js/jquery.lazy.js';?>"></script>
@@ -30,9 +35,18 @@
 	background: #34363a !important;
 }
 </style>
+<?php
+	/**************************/
+	/**** END CREW BIO MOD ****/
+	/**************************/
+?>
 
 <script type="text/javascript">
 	$(document).ready(function(){
+
+				/**********************/
+				/**** CREW BIO MOD ****/
+				/**********************/
 
 				$.lazy({
 					src: '<?php echo base_url() . MODFOLDER;?>/assets/js/bootstrap-twipsy.js',
@@ -55,6 +69,23 @@
 					},
 					cache: true
 				});
+				
+				$('[rel=tooltip]').twipsy({
+					animate: false,
+					offset: 5,
+					placement: 'right'
+				});
+				
+				
+				$('[rel=popover]').popover({
+					animate: false,
+					offset: 5,
+					placement: 'right'
+				});
+
+				/**************************/
+				/**** END CREW BIO MOD ****/
+				/**************************/
 
 
 		$('#tabs').tabs();
@@ -66,17 +97,5 @@
 			social_tools: '<div class="pp_social"></div>'
 		});
 
-		$('[rel=tooltip]').twipsy({
-			animate: false,
-			offset: 5,
-			placement: 'right'
-		});
-		
-		
-		$('[rel=popover]').popover({
-			animate: false,
-			offset: 5,
-			placement: 'right'
-		});
 	});
 </script>

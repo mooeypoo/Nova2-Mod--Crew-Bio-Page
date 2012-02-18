@@ -85,7 +85,11 @@
 			<?php if (isset($msg_error)): ?>
 				<?php echo text_output($msg_error, 'h3', 'red');?>
 			<?php endif; ?>
-
+<?php
+	/**********************/
+	/**** CREW BIO MOD ****/
+	/**********************/
+?>
 			<div id='infocols'>
 			<div id='leftcol'>
 			<?php if (isset($character_info)): ?>
@@ -99,7 +103,6 @@
 				<?php endforeach; ?>
 			<?php endif;?><br>
 			</div>
-			<!-- AWARDS -->
 			<div id='rightcol'>
 			<?php 
 				if (isset($character_awards) && (count($character_awards)>0)) { 
@@ -110,8 +113,12 @@
 				}
 			?>
 			</div>
-			<!-- AWARDS -->
 			</div>
+<?php
+	/**************************/
+	/**** END CREW BIO MOD ****/
+	/**************************/
+?>
 			<?php if (isset($tabs)): ?>
 				<div id="tabs">
 					<ul>
