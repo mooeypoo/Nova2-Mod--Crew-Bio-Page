@@ -25,7 +25,11 @@ If your controller file was previously edited, be careful not overriding the cha
 
 2. **IF YOUR VIEW FILES WERE NOT PREVIOUSLY EDITED**, Upload the [mod]/application/views folder to [your domain]/application/views/
 
-### NOTE
+### NOTE (Narrow fix)
+Anodyne released a "narrow" fix for the crew bios. If you use this fix, you can still use this mod -- just upload the file 'personnel_character-narrow.php' from the applications/views/_base_override/main/pages/ folder to your domain, and then rename the file to remove the -narrow.
+In other words, there are two options for the view files in the mod folder -- the regular view, and the narrow view, and you can use either one.
+
+### NOTE (Previously Edited Files)
 If you already edited these files for another mod, you will have to be careful manually managing this extension into the existing files. I only recommend you do that if YOU REALLY KNOW WHAT YOU'RE DOING! 
 
 I have marked all the changed/additions in the view file with HTML/PHP comments, so you should just find where they are and plug them into your previously-edited file.
